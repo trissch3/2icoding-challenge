@@ -1,0 +1,11 @@
+def max_digit_sum(arr):
+    max_sum = 0
+    for s in arr:
+        digit_sum = sum(int(c) for c in s if c.isdigit())
+        if digit_sum > max_sum:
+            max_sum = digit_sum
+    return max_sum
+
+# Example usage:
+strings = ["abc123", "a1b2c3", "xyz9", "no_digits_here", "a9b8c7"]
+print(max_digit_sum(strings))  # Output: 24  (from "a9b8c7" => 9+8+7)
