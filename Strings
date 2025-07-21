@@ -1,0 +1,5 @@
+strings = ["123", "45", "36"]  # Example input
+
+for s in strings:
+    digits = [int(ch) for ch in s if ch.isdigit()]
+    print(f"Original string: {s} -> Digits: {digits}")
